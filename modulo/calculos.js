@@ -7,23 +7,24 @@ function calcularSoma(valor, tipoEquacao) {
 
     // Validação do valor
     if (isNaN(calculos) || valor.trim() === '') {
-        return 'ERRO: O valor da soma deve ser um número válido!'
-    }else{
-        switch (tipoEquacao.toLowerCase()) {
-            case 'soma':
-                return calculos + calculos
-            case 'divisao':
-                return calculos / 2
-            case 'subtracao':
-                return calculos - calculos
-            case 'multiplicacao':
-                return calculos * calculos
-            default:
-                return 'ERRO: Só pode Escolher entre Soma, Divisão, Subtração ou Multiplicação.'
+        return 'ERRO: O valor da soma deve ser um número válido!';
+    } else {
+        let tipo = tipoEquacao.toLowerCase();
+    
+        if (tipo === 'soma') {
+            return calculos + calculos;
+        } else if (tipo === 'divisao') {
+            return calculos / 2;
+        } else if (tipo === 'subtracao') {
+            return calculos - calculos;
+        } else if (tipo === 'multiplicacao') {
+            return calculos * calculos;
+        } else {
+            return 'ERRO: Só pode escolher entre Soma, Divisão, Subtração ou Multiplicação.';
         }
     }
 
-    
+
 
 
 }
